@@ -24,6 +24,9 @@ const getCurrentUser = catchAsync(async (req, res, next) => {
 const updateCurrentUser = catchAsync(async (req, res, next) => {
   const { id } = req.user;
 
+  console.log(req.file);
+  console.log(req.body);
+
   // 1) Create error if user POSTs password data
   if (req.body.password || req.body.passwordConfirm) {
     throw new AppError(
