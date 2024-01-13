@@ -1,10 +1,7 @@
 const express = require('express');
-const multer = require('multer');
 
 const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
-
-const upload = multer({ dest: 'public/img/users' });
 
 const router = express.Router();
 
@@ -23,7 +20,8 @@ router.patch('/update-password', authController.updatePassword);
 router.get('/me', userController.getCurrentUser, userController.getUser);
 router.patch(
   '/update-me',
-  upload.single('photo'),
+  userController.uploadUserPhoto,
+  userController.resizeUserPhoto,
   userController.updateCurrentUser,
 );
 router.delete('/delete-me', userController.deleteCurrentUser);
