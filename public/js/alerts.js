@@ -18,6 +18,4 @@ const showAlert = (type, msg, time = 7) => {
 
 const alertMessage = document.querySelector('body').dataset.alert;
 
-console.log(alertMessage, 'al');
-
 if (alertMessage) showAlert('success', alertMessage, 20);
