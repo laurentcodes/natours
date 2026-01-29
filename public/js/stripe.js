@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 const stripe = Stripe(
-  'pk_test_51OY6nEJ6RKTyIiKQamat1XuhjsDnljn0DCcY1o77hkYBste3oVUZiSfi7xSLpyLLfhMoFUn4Q3GRnUz2Ia0v3X7s00PnxMF7oo',
+  'pk_test_51SuwXSJRPtdTBd4xep0pfqUG1z6sHKI6sCTjPFYFcD9Jp0ozlcMl4Hp0X1nwYsJlDKEacqXUXoBT8Oj925qwzNGO00I25JtgsH',
 );
 
 const bookTour = async (tourID) => {
